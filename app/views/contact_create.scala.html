@@ -1,0 +1,14 @@
+@(form: Form[ContactModel])
+
+@helper.form(action = routes.ContactController.save()){
+	@helper.inputText(form("name"),
+		'_label -> "Name : "
+	)
+	
+	@helper.inputText(form("phone"),
+		'_label -> "Phone : "
+	)
+	
+	<input type="submit" value="save"/>
+}
+

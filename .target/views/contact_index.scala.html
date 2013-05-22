@@ -1,0 +1,14 @@
+@(contacts: List[ContactModel])
+
+<table border="2">
+@for(contact<-contacts){
+	<tr>
+		<td>1</td>
+		<td><a href="@routes.ContactController.update(contact.contactId)">Edit</a></td>
+		<td><a href="@routes.ContactController.delete(contact.contactId)">Delete</a></td>
+		<td>@contact.name, @contact.phone </td>
+	<tr>
+}
+</table>
+<p> sayed fazil has coded this field</p>
+<a href="@routes.ContactController.create()">New</a>

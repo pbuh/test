@@ -1,0 +1,8 @@
+@(row: Integer, contact: ContactModel)
+
+<tr>
+	<td>@row</td>
+	<td><a href="@routes.ContactController.update(contact.contactId)">Edit</a></td>
+	<td><a href="@routes.ContactController.delete(contact.contactId)">Delete</a></td>
+	<td>@contact.name, @contact.phone </td>
+</tr>
